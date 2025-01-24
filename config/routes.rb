@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   if Rails.env.development?
     mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql"
   end
@@ -16,5 +15,14 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  #
+  root "sessions#new"
+
+  # User registration routes
+  get "signup", to: "users#new" # Display signup form
+  post "signup", to: "users#create" # Handle form submission
+
+  # Login/logout routes
+  get "login", to: "sessions#new" # Display login form
+  post "login", to: "sessions#create" # Handle login form submission
+  delete "logout", to: "sessions#destroy"
 end

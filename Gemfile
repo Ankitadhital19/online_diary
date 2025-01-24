@@ -43,4 +43,8 @@ group :development, :test do
   gem "graphql"
   gem "graphiql-rails", group: :development
   gem "sprockets-rails"
+
+  gem "jwt"
+
+  gem "bcrypt", "~> 3.1.7"
 end
