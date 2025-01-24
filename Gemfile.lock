@@ -112,6 +112,8 @@ GEM
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
     json (2.9.1)
+    jwt (2.10.1)
+      base64
     language_server-protocol (3.17.0.3)
     logger (1.6.5)
     loofah (2.24.0)
@@ -283,12 +285,14 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
+  bcrypt (~> 3.1.7)
   bootsnap
   brakeman
   debug
   devise
   graphiql-rails
   graphql
+  jwt
   puma (>= 5.0)
   rails (~> 7.2.1)
   rubocop-rails-omakase
